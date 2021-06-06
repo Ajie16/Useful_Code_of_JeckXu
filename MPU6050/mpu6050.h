@@ -81,6 +81,9 @@
 //#define MPU_READ    0XD1
 //#define MPU_WRITE   0XD0
 
+typedef unsigned char u8;
+typedef unsigned short u16;
+
 u8 MPU_Init(void); 								//初始化MPU6050
 u8 MPU_Write_Len(u8 addr,u8 reg,u8 len,u8 *buf);//IIC连续写
 u8 MPU_Read_Len(u8 addr,u8 reg,u8 len,u8 *buf); //IIC连续读 

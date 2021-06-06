@@ -1,8 +1,6 @@
 #include "./mpu6050.h"
 #include "./delay.h"
 
-#include "main.h"
-#include "usart.h"   
 #include "i2c.h"
 
 //初始化MPU6050
@@ -11,9 +9,8 @@
 u8 MPU_Init(void)
 { 
 	u8 res;
-
 	MPU_Write_Byte(MPU_PWR_MGMT1_REG,0X80);	//复位MPU6050
-  delay_ms(100);
+	delay_ms(100);
 	MPU_Write_Byte(MPU_PWR_MGMT1_REG,0X00);	//唤醒MPU6050 
 	MPU_Set_Gyro_Fsr(3);					//陀螺仪传感器,±2000dps
 	MPU_Set_Accel_Fsr(0);					//加速度传感器,±2g
