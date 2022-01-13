@@ -1,5 +1,6 @@
 //printf重定向代码,修改其底层fputc
 #if 1
+//studio插入到usart.h的头文件上
 #include <stdio.h>
 
 /* 告知连接器不从C库链接使用半主机的函数 */
